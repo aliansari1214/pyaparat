@@ -1,10 +1,15 @@
 ## Download 'aparat.com' videos with python
 
+
+install:
+```python
+pip install pyaparat
+```
 usage:
 
 ```python
-from pyaparat import main
+from pyaparat import Main
 
-a = main('url', 'quality')
+a = Main('url', 'quality')
 a.download()
 ```
