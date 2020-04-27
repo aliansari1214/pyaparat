@@ -5,6 +5,6 @@ usage:
 ```python
 from pyaparat import main
 
-a = main(url, quality)
+a = main('url', 'quality')
 a.download()
 ```
