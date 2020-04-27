@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import re
-from exceptions import QualityError
+from pyaparat.exceptions import QualityError
 
 
 qualities = {

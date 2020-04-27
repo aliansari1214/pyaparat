@@ -1,4 +1,4 @@
-from scraper import Scraper
+from pyaparat.scraper import Scraper
 import sys
 import requests
 
