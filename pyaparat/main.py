@@ -29,7 +29,3 @@ class Main:
 					sys.stdout.write("\r[%s%s]" % ('=' * done, ' ' * (50-done)))
 					sys.stdout.flush()
 		print('\nVideo downloaded...')
-
-	def available_qualities(self):
-		return self.scraper.get_qualities()
-

@@ -20,13 +20,19 @@ class Scraper:
 		self.quality = quality
 
 	def get_all_links(self):
+		"""
+		takes `url` and brings all links available
+		"""
 		result = requests.get(self.url)
 		content = BeautifulSoup(result.text, 'html.parser')
 		video_links = content.find_all('a', href=re.compile('.mp4'))
-		hrefs = [link['href'] for link in video_links]
-		return hrefs
+		links = [link['href'] for link in video_links]
+		return links
 
 	def get_link(self):
+		"""
+		return the user requested quality, if not available raise QualityError
+		"""
 		links = self.get_all_links()
 		available_qualities = self.get_qualities()
 		if self.quality not in available_qualities:
@@ -36,6 +42,9 @@ class Scraper:
 			return link
 
 	def get_qualities(self):
+		"""
+		return all available qualities
+		"""
 		links = self.get_all_links()
 		qua = list(qualities.keys())
 		available_qualities = []
