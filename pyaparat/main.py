@@ -1,5 +1,4 @@
 from pyaparat.scraper import Scraper
-import sys
 import requests
 
 
