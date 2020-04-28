@@ -26,6 +26,5 @@ class Main:
 					download += len(data)
 					f.write(data)
 					done = int(50*download / total)
-					sys.stdout.write("\r[%s%s]" % ('=' * done, ' ' * (50-done)))
-					sys.stdout.flush()
+					print("\r[%s%s]" % ('=' * done, ' ' * (50-done)), end='')
 		print('\nVideo downloaded...')
