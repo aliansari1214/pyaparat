@@ -1,11 +1,11 @@
 ## Download 'aparat.com' videos with python
 
 
-install:
+**Installation**
 ```python
 pip install pyaparat
 ```
-usage:
+**usage**
 
 ```python
 from pyaparat import Main
